@@ -1,0 +1,32 @@
+---
+title: ""RECTA DE REGRESIÓN LINEAl - SEMANA 7""
+author: "RAMOS MARCHAND HARUMY"
+format: html
+editor: visual
+---
+
+## Quarto
+
+```{r}
+#DATOS
+
+x <- c(2,4,6,8,10)
+
+y <- c(55,63,71,80,88)
+```
+
+```{r}
+#Correlación de pearsson
+
+cor(x,y)
+```
+
+```{r}
+#Obtener coeficientes de la regresión
+
+#Modelo
+
+modelo <- lm(y ~ x)
+
+coef(modelo)
+```
