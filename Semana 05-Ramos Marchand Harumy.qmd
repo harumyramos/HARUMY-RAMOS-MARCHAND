@@ -1,0 +1,32 @@
+---
+title: "Ramos Marchand Harumy"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#GRÁFICO DE BARRAS EN R
+#CREAR DATOS
+categorias<-c("Hepatitis","Tuberculosis","Neumonia","Diabetes","Anemia")
+valores<-c(25,40,30,70,60)
+```
+
+You can add options to executable code like this
+
+```{r}
+#Generar gráfico de barras
+barplot(valores,names.arg=categorias,
+        col="pink",main="Gráfico de barras",
+        xlab="categorias",
+        ylab="valores",border="black")
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
