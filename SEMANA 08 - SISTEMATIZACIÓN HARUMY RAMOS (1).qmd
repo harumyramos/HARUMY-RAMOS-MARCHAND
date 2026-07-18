@@ -1,0 +1,48 @@
+---
+title: "SEMANA 08: GRÁFICA DE LA RECTA DE REGRESIÓN LINEAL"
+author: "RAMOS MARCHAND HARUMY"
+format: html
+editor: visual
+---
+
+## Quarto
+
+```{r}
+#DATOS
+
+x <- c(2,4,6,8,10)
+
+y <- c(55,63,71,80,88)
+```
+
+You can add options to executable code like this
+
+```{r}
+#Correlación de pearsson
+
+cor(x,y)
+
+#Obtener coeficientes de la regresión
+#Modelo
+modelo <- lm(y ~ x)
+coef(modelo)
+
+#Predicción para 12 horas de estudio
+predict(modelo,data.frame(x=12))
+```
+
+```{r}
+#gráfico
+
+plot(x,y,main = "Hora de estudios vs Nota",
+     
+     xlab="Hora de estudios",
+     
+     ylab="Nota",
+     
+     pch=19)
+
+
+
+abline(modelo,lwd=2)
+```
